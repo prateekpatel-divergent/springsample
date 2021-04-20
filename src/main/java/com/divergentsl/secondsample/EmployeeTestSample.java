@@ -19,7 +19,7 @@ public class EmployeeTestSample {
 	public static void main(String[] args) {
 		Resource resource = new ClassPathResource("secondsample.xml");
 		BeanFactory factory = new XmlBeanFactory(resource);
-		Employee emp = (Employee) factory.getBean("employee");
+		Employee emp = factory.getBean("employee", Employee.class);
 		emp.show();
 	}
 
